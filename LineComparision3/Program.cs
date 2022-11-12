@@ -1,10 +1,13 @@
-﻿namespace LineComparision3
+﻿using LineComparison;
+
+namespace LineComparision3
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello To LineComparision Problem");
+            CalculateLength calculateLength = new CalculateLength(5, 2, 5, 1);
+            calculateLength.Calculate();
         }
     }
 }
