@@ -1,13 +1,25 @@
-﻿using LineComparison;
-
-namespace LineComparision3
+﻿using System;
+namespace LineComprasionProblem
 {
-    internal class Program
+    class Program
     {
         static void Main(string[] args)
         {
-            CalculateLength calculateLength = new CalculateLength(5, 2, 5, 1);
-            calculateLength.Calculate();
+            double firstLine, secondLine;
+
+            CalculateLength line = new CalculateLength(3, 4, -2, 3);
+            firstLine = line.Calculate();
+            CalculateLength line1 = new CalculateLength(1, 2, 3, 4);
+            secondLine = line1.Calculate();
+
+            if (firstLine.Equals(secondLine))
+            {
+                Console.WriteLine("Calculate lines are Equal");
+            }
+            else
+            {
+                Console.WriteLine(" Calculate  lines are Not equal");
+            }
         }
     }
 }
